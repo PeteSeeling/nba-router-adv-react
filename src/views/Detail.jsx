@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+
 
 export default function Detail() {
     const [character, setCharacter] = useState({});

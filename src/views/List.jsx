@@ -15,9 +15,11 @@ export default function List(){
     useEffect(() => {
         const getCharacters = async () => {
             setLoading(true);
+
             const statusParam = new URLSearchParams(location.search).get('status');
 
-            const url = statusParam === 'all' || !statusParam
+            const url = 
+            statusParam === 'all' || !statusParam
                 ? 'https://rickandmortyapi.com/api/character'
                 : `https://rickandmortyapi.com/api/character?status=${statusParam}`;
 
@@ -44,8 +46,8 @@ export default function List(){
                         <option value='unknown'>Unknown</option>
                     </select>
                     {characters.map((character) => (
-                        <article key={charcater.id}>
-                            <Link to={`/characters/${character.id}`}>
+                        <article key={character.id}>
+                            <Link to={`/character/${character.id}`}>
                                 <h4>{character.name}</h4>
                             </Link>
                             <p>{character.species}</p>
