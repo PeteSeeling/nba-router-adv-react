@@ -8,7 +8,7 @@ import App from './App';
 describe('<App />', () => {
     it('renders clickable names on list view. Onclick redirects to detail page', async () => {
         render(
-            <MemoryRouter 
+            <MemoryRouter ></MemoryRouter>
         )
     })
 })
