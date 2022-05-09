@@ -17,7 +17,6 @@ export default function List(){
             setLoading(true);
 
             const statusParam = new URLSearchParams(location.search).get('status');
-
             const url = 
             statusParam === 'all' || !statusParam
                 ? 'https://rickandmortyapi.com/api/character'
@@ -45,6 +44,7 @@ export default function List(){
                         <option value='alive'>Alive</option>
                         <option value='unknown'>Unknown</option>
                     </select>
+
                     {characters.map((character) => (
                         <article key={character.id}>
                             <Link to={`/character/${character.id}`}>
@@ -58,7 +58,6 @@ export default function List(){
         )}
         </>
     );
-
 }
 
 
